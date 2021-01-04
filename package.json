@@ -10,9 +10,12 @@
     "@mdx-js/loader": "^1.5.1",
     "@mdx-js/react": "^1.6.18",
     "@next/mdx": "^9.1.1",
+    "autoprefixer": "^10.1.0",
     "next": "latest",
+    "postcss": "^8.2.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "tailwindcss": "^2.0.2"
   },
   "license": "MIT"
 }
