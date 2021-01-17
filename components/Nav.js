@@ -12,7 +12,8 @@ const Nav = () => (
               <div className="ml-6 flex space-x-4">
                 <Link href="/articles"><a className="text-gray-700 inline-flex items-center  font-sm hover:underline">Articles</a></Link>
                 <Link href="/journal"><a className="text-gray-700 inline-flex items-center  font-sm hover:underline">Journal</a></Link>                
-                <Link href="/projects"><a href="/projects" className="text-gray-700 inline-flex items-center  font-sm hover:underline">Projects</a></Link>
+                <Link href="/projects"><a className="text-gray-700 inline-flex items-center  font-sm hover:underline">Projects</a></Link>
+                <Link href="/playground"><a className="text-gray-700 inline-flex items-center  font-sm hover:underline">Playground</a></Link>
               </div>
             </div>
 
