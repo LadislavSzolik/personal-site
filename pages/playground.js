@@ -3,6 +3,8 @@ import Link from 'next/link';
 
 
 export default function Projects() {
+  state = {color: 'blue'};
+
   return (
     <Layout>
       <div className="prose sm:prose-lg">
