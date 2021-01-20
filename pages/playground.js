@@ -1,10 +1,20 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
+import React, { useState } from 'react';
+import classNames from 'classnames';
 
 
 export default function Projects() {
+  const [brand, setBrand] = useState('input-indigo');
+  var blueBtn = classNames('btn-blue-outline', {
+    'btn-blue-filled': brand == 'input-blue',
+  });
 
+  var indigoBtn = classNames('btn-indigo-outline', {
+    'btn-indigo-filled': brand == 'input-indigo',
+  });
   return (
+
     <Layout>
       <div className="prose sm:prose-lg">
         <h1>Playground</h1>
@@ -17,13 +27,23 @@ export default function Projects() {
           <li>add a color switcher</li>
         </ul>
 
+        <div className="mt-2" >
+          <button type="button" className={blueBtn} onClick={() => setBrand('input-blue')} >
+            <span>Set Blue</span>
+          </button>
+          <button type="button" className={indigoBtn} onClick={() => setBrand('input-indigo')} >
+            <span>Set Indigo</span>
+          </button>
+        </div>
+
+
         <div className="mt-5">
           <label htmlFor="price" className="block text-sm font-medium text-gray-700">Email Address</label>
           <div className="mt-1 relative rounded-md shadow-sm" >
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" >
               <span className="text-gray-500 sm:text-sm">@</span>
             </div>
-            <input type="text" name="email" id="email" autocapitalize="none" className="focus:ring-blue-500 focus:border-blue-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" />
+            <input type="text" name="email" id="email" autocapitalize="none" className={brand} />
           </div>
         </div>
 
@@ -33,9 +53,9 @@ export default function Projects() {
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" >
               <span className="text-gray-500 sm:text-sm">@</span>
             </div>
-            <input type="text" name="email" id="email" autocapitalize="none" className="focus:ring-blue-500 focus:border-blue-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" />
+            <input type="text" name="email" id="email" autocapitalize="none" className={brand} />
             <div className="absolute inset-y-0 right-0 flex items-center">
-              <button type="button" className="focus:ring-2 focus:ring-blue-500 h-full px-3 text-blue-500 sm:text-sm border-gray-300 border-l  rounded-r-md" >
+              <button type="button" className="focus:ring-2 focus:ring-blue-500 h-full px-3 text-blue-500 sm:text-sm border-gray-300 border-l rounded-r-md" >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
