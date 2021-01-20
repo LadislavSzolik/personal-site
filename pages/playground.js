@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 
 export default function Projects() {
-  state = {color: 'blue'};
 
   return (
     <Layout>
@@ -52,12 +51,8 @@ export default function Projects() {
             </svg>
             <span>Add email address</span>
           </button>
-
         </div>
-
       </div>
-
-
 
     </Layout>
   );
