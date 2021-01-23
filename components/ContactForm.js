@@ -20,7 +20,7 @@ export default class MyForm extends React.Component {
         
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl ">Get in touch</h2>
 
-        <p className="my-4 text-lg leading-6 text-gray-500">You want to say hello, or work together?</p>
+        <p className="my-4 text-lg leading-6 text-gray-500">You have a project in mind or just want to say hello?</p>
 
         <div class="space-y-4">
           <div>
