@@ -5,27 +5,17 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {    
-      typography: (theme) => ({
-        DEFAULT: { 
-          css: {
-            h1: {
-              color: theme('colors.blue.500'),
-            },
-            h2: {
-              color: theme('colors.blue.500'),
-            },
-            h3: {
-              color: theme('colors.blue.500'),
-            },
-          }
-        },
-      }),
-    },
+      colors: {
+        teal: colors.teal,
+        cyan: colors.cyan,
+      }
+    }
   },
   variants: {
     extend: {},
   },
   plugins: [
+    require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
   ],

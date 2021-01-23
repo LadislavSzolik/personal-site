@@ -5,7 +5,7 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>                  
-                    <link rel="icon" href="/favicon.ico" />
+                    <link rel="icon" href="/favicon.ico" />                    
                     <meta content="IE=edge" httpEquiv="X-UA-Compatible" />                    
                     <meta charSet="utf-8" />
                 </Head>
