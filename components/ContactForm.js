@@ -22,16 +22,16 @@ export default class MyForm extends React.Component {
 
         <p className="my-4 text-lg leading-6 text-gray-500">You have a project in mind or just want to say hello?</p>
 
-        <div class="space-y-4">
+        <div className="space-y-4">
           <div>
-            <label for="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
             <div className="mt-1">
-              <input type="email" name="email" id="email" autocomplete="email" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"/>
+              <input type="email" name="email" id="email" autoComplete="email" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"/>
             </div>
           </div>
           
           <div className="sm:col-span-2">
-            <label for="message" className="block text-sm font-medium text-gray-700">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
             <div className="mt-1">
               <textarea id="message" name="message" rows="4" className="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md"></textarea>
             </div>
