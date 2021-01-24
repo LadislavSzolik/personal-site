@@ -1,13 +1,13 @@
 import hydrate from 'next-mdx-remote/hydrate';
 import { getFiles, getFileBySlug } from '../../lib/mdx';
-import SingleItemLayout from '@/layouts/SingleItem';
+import SingleItem from '@/layouts/SingleItem';
 
 
 export default function Article({ mdxSource, frontMatter }) {
     const content = hydrate(mdxSource, {
       components: [],
     });
-    return <SingleItemLayout frontMatter={frontMatter}>{content}</SingleItemLayout>;
+    return <SingleItem frontMatter={frontMatter}>{content}</SingleItem>;
   }
   
   export async function getStaticPaths() {

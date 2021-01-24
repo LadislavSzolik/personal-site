@@ -1,7 +1,6 @@
 import Layout from '@/layouts/BaseLayout'
 
-
-export default function SingleItemLayout({children, frontMatter}) {
+export default function SingleItem({children, frontMatter}) {
   return (
     <Layout>      
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
