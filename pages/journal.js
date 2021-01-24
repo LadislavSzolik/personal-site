@@ -1,5 +1,5 @@
 import Layout from '../layouts/BaseLayout';
-import JournalItem from '../components/JournalItem';
+import JournalItem from 'components/JournalItem';
 import { getAllFilesFrontMatter } from '../lib/mdx';
 
 
