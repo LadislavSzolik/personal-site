@@ -3,7 +3,6 @@ import Nav from "@/components/Nav";
 
 export default function Layout({
   children,
-  title = "This is the default title",
 }) {
   return (
     <>
