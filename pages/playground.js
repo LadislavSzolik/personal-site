@@ -1,4 +1,4 @@
-import Layout from '../components/Layout';
+import Layout from '../layouts/BaseLayout';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import classNames from 'classnames';

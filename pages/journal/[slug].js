@@ -1,6 +1,6 @@
 import hydrate from 'next-mdx-remote/hydrate';
 import { getFiles, getFileBySlug } from '../../lib/mdx';
-import SingleItemLayout from '@/layouts/singleItem';
+import SingleItemLayout from '@/layouts/SingleItem';
 
 
 export default function Journal({ mdxSource, frontMatter }) {
