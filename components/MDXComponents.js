@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import BookThumbnail from '@/components/BookThumbnail';
 
 
 const CustomLink = (props) => {
@@ -19,6 +20,7 @@ const CustomLink = (props) => {
 
 const MDXComponents = {
   Image,
+  BookThumbnail,
   a: CustomLink
 };
 

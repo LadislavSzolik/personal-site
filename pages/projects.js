@@ -1,21 +1,25 @@
-import Layout from '../layouts/BaseLayout';
-import ArticleItem from '../components/ArticleItem';
+import Layout from '@/layouts/BaseLayout';
+import { getAllFilesFrontMatter } from '@/lib/mdx';
 
 
+export default function Projects({ projects }) {  
 
-export default function Projects() {
   return (
     <Layout>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
           <div className="prose sm:prose-lg">
             <h1>Projects</h1>
-          </div>
-  
-          <div className="my-4">
-            Working on it... just take some time.
-          </div>
+            <p>This is still under construction...takes time to create nice visuals 😉</p>
+          </div>       
+          {!projects.length && 'Nothing published yet.'}  
+          
         </div>
+
     </Layout>
   );
 }
 
+export async function getStaticProps() {
+  const projects = await getAllFilesFrontMatter('projects');
+  return { props: { projects } };
+}

@@ -1,11 +1,12 @@
 import hydrate from 'next-mdx-remote/hydrate';
 import { getFiles, getFileBySlug } from '../../lib/mdx';
 import SingleItem from '@/layouts/singleItem';
+import MDXComponents from '@/components/MDXComponents';
 
 
 export default function Article({ mdxSource, frontMatter }) {
     const content = hydrate(mdxSource, {
-      components: [],
+      components: MDXComponents,
     });
     return <SingleItem frontMatter={frontMatter}>{content}</SingleItem>;
   }
