@@ -93,7 +93,7 @@ export default function HomePage() {
                 <dd className="my-2 text-base text-gray-500">
                 I've learned some interesting lessons on the way. In my articles I captured the ones which I believe stay relevant for some time and share them with you.
                 </dd>
-                <Link href="/journal">
+                <Link href="/articles">
                   <a className="text-base font-semibold text-teal-600 hover:text-teal-500">
                     Learn more{" "}
                   </a>
