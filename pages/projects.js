@@ -1,8 +1,14 @@
 import Layout from '@/layouts/BaseLayout';
 import { getAllFilesFrontMatter } from '@/lib/mdx';
+import ProjectListItem from '@/components/ProjectListItem';
 
 
 export default function Projects({ projects }) {  
+  const filteredProjects = projects
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    );
 
   return (
     <Layout>
@@ -11,10 +17,11 @@ export default function Projects({ projects }) {
             <h1>Projects</h1>
             <p>This is still under construction...takes time to create nice visuals 😉</p>
           </div>       
-          {!projects.length && 'Nothing published yet.'}  
-          
+          {!filteredProjects.length && 'Nothing published yet.'}        
+          {filteredProjects.map((frontMatter) => (
+            <ProjectListItem key={frontMatter.title} {...frontMatter} />
+          ))}   
         </div>
-
     </Layout>
   );
 }
