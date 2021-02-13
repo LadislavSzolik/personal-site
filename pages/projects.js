@@ -1,15 +1,9 @@
 import Layout from '@/layouts/BaseLayout';
-import { getAllFilesFrontMatter } from '@/lib/mdx';
 import ProjectListItem from '@/components/ProjectListItem';
+import {projects} from '../projects';
 
 
 export default function Projects({ projects }) {  
-  const filteredProjects = projects
-    .sort(
-      (a, b) =>
-        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
-    );
-
   return (
     <Layout>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
@@ -17,9 +11,9 @@ export default function Projects({ projects }) {
             <h1>Projects</h1>
             <p>This is still under construction...takes time to create nice visuals 😉</p>
           </div>       
-          {!filteredProjects.length && 'Nothing published yet.'}        
-          {filteredProjects.map((frontMatter) => (
-            <ProjectListItem key={frontMatter.title} {...frontMatter} />
+          {!projects.length && 'Nothing published yet.'}        
+          {projects.map(project => (
+            <ProjectListItem key={project.slug} {...project}></ProjectListItem>
           ))}   
         </div>
     </Layout>
@@ -27,6 +21,12 @@ export default function Projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const projects = await getAllFilesFrontMatter('projects');
-  return { props: { projects } };
+  return {
+    props: {
+      projects: projects.map(project =>({
+        ...project,
+        url: `${project.id}`
+      })),
+    },
+  };
 }

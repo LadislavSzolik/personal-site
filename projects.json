@@ -1,0 +1,9 @@
+{
+    "projects": [
+        {
+            "slug":"greenwiperz",
+            "title":"The Mobile Car wash in Zürich",
+            "summary":"Full stack web app for a carwash booking system using Laravel, Laravel-Livewire and Tailwind CSS."
+        }
+    ]
+}

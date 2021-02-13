@@ -1,4 +1,4 @@
-import Layout from '../layouts/BaseLayout';
+import Layout from '../layouts/StandardWidthLayout';
 import JournalItem from 'components/JournalItem';
 import { getAllFilesFrontMatter } from '../lib/mdx';
 
@@ -12,7 +12,7 @@ export default function Journal({ journal }) {
 
   return (
     <Layout>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+        <div>
           <div className="prose sm:prose-lg">
             <h1>Journal</h1>
             <p>I write about certain milestones and happenings in my life. It will be fun to read it later.</p>

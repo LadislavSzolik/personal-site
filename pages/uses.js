@@ -1,10 +1,10 @@
-import Layout from "@/layouts/BaseLayout";
+import Layout from "@/layouts/StandardWidthLayout";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
     <Layout>
-      <article className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+      <article>
         <div className="mb-4 lg:mb-16 prose lg:prose-lg">
           <h1>Uses</h1>
         </div>

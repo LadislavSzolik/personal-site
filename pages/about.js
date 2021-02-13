@@ -1,9 +1,9 @@
-import Layout from "@/layouts/BaseLayout";
+import StandardLayout from "@/layouts/StandardWidthLayout";
 
 export default function HomePage() {
   return (
-    <Layout>
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 ">
+    <StandardLayout>
+      <main >
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">About me</h1>
           <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:space-x-16 my-8">
             <div>
@@ -463,6 +463,6 @@ export default function HomePage() {
           </ul>
         </div>
       </main>
-    </Layout>
+    </StandardLayout>
   );
 }
