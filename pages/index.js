@@ -1,39 +1,34 @@
 import Link from "next/link";
+import Image from "next/image";
 import BaseLayout from "@/layouts/BaseLayout";
 import ContactForm from "@/components/ContactForm";
 
 export default function HomePage() {
   return (
     <BaseLayout>
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 sm:mt-16 pb-8">
-        <div className="flex flex-col-reverse sm:flex-row">
-          <article className="prose lg:prose-lg">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 py-8 sm:py-16 lg:py-24">
+        <article className="prose lg:prose-lg">
+          <div className="flex flex-col-reverse lg:flex-row">
             <h1 className="mt-4 tracking-tight font-extrabold sm:mt-5 lg:mt-6 ">
-              <span className="block">Hi, I am Ladislav</span>
+              <span className="block">Hi, I am Ladislav </span>{" "}
               <span className="sm:leading-tight bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-600 block">
                 ux designer and developer
               </span>
             </h1>
-            <div className=" text-gray-600 ">
-              <span className="block">
-                I am currently working in Credit Suisse, Zurich as a Senior User Experience (UX)
-                Designer. Major part of my work is to design complex web and mobile
-                applications...yeah it's fun!
-              </span>              
+            <div className="pb-8 sm:pb-0">
+              <Image alt="Home" src="/designer.png" width={300} height={161} />
             </div>
-          </article>
-          <div className="pb-8 sm:pt-0 sm:pl-12 flex-shrink-0">
-            <img
-              alt="Home"
-              src="/designer.png"
-              className="h-32 md:h-44 lg:h-60"
-            />
           </div>
-        </div>
+          <div className=" text-gray-600 ">
+            Currently working for Credit Suisse, Zurich as a Senior User
+            Experience Designer. Major part of my work is to design complex web
+            and mobile applications... it's fun!
+          </div>
+        </article>
       </section>
 
       <section className="bg-gray-50 py-8 sm:py-16 lg:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
             <div>
               <div className="flex items-center justify-center h-12 w-12 rounded bg-teal-100 text-teal-600">
@@ -91,7 +86,9 @@ export default function HomePage() {
                   Articles
                 </dt>
                 <dd className="my-2 text-base text-gray-500">
-                I've learned some interesting lessons on the way. In my articles I captured the ones which I believe stay relevant for some time and share them with you.
+                  I've learned some interesting lessons on the way. In my
+                  articles I captured the ones which I believe stay relevant for
+                  some time and share them with you.
                 </dd>
                 <Link href="/articles">
                   <a className="text-base font-semibold text-teal-600 hover:text-teal-500">
@@ -123,7 +120,8 @@ export default function HomePage() {
                   About
                 </dt>
                 <dd className="my-2 text-base text-gray-500">
-                  If you want to know more about me and my professional background, this is the place to go. 
+                  If you want to know more about me and my professional
+                  background, this is the place to go.
                 </dd>
                 <Link href="/about">
                   <a className="text-base font-semibold text-teal-600 hover:text-teal-500">
@@ -136,11 +134,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mt-24 max-w-xl mx-auto items-center px-4 sm:px-6 lg:px-8">
+      <section className="mt-24 max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
         <ContactForm />
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="prose ">
           <span className="text-gray-500 block">
             This website was born out of the inspiration from the creators of
