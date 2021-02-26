@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BookThumbnail = ({ title, author, url }) => {
   return (
-    <>
+    <div>
       <div className="w-28">
         <Image alt={title} width={230} height={398} src={`/books/${url}`} />
       </div>
@@ -13,7 +13,7 @@ const BookThumbnail = ({ title, author, url }) => {
           {author}
         </span>
       </p>
-    </>
+    </div>
   );
 };
 
